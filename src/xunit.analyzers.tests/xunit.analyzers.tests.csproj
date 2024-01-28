@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Xunit.Analyzers</RootNamespace>
+    <TargetFrameworks>net8.0;net472</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Download packages referenced by CodeAnalyzerHelper -->
+    <PackageDownload Include="Microsoft.Bcl.AsyncInterfaces" Version="[8.0.0]" />
+    <PackageDownload Include="Microsoft.Extensions.Primitives" Version="[8.0.0]" />
+    <PackageDownload Include="System.Collections.Immutable" Version="[1.6.0]" Condition=" '$(TargetFramework)' == 'net472' " />
+    <PackageDownload Include="System.Text.Json" Version="[8.0.0]" />
+    <PackageDownload Include="System.Threading.Tasks.Extensions" Version="[4.5.4]" />
+    <PackageDownload Include="xunit.assert" Version="[2.6.5]" />
+    <PackageDownload Include="xunit.runner.utility" Version="[2.6.5]" />
+    <PackageDownload Include="xunit.v3.assert" Version="[0.1.1-pre.342]" />
+    <PackageDownload Include="xunit.v3.common" Version="[0.1.1-pre.342]" />
+    <PackageDownload Include="xunit.v3.extensibility.core" Version="[0.1.1-pre.342]" />
+    <PackageDownload Include="xunit.v3.runner.utility" Version="[0.1.1-pre.342]" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\xunit.analyzers\xunit.analyzers.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="true" />
+    <ProjectReference Include="..\xunit.analyzers.fixes\xunit.analyzers.fixes.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="true" />
+  </ItemGroup>
+
+</Project>

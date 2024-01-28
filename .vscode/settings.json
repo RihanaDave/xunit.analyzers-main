@@ -1,0 +1,19 @@
+{
+	"cSpell.words": [
+		"LLMBRO",
+		"MBRO",
+		"app",
+		"nuget",
+		"nupkg",
+		"parallelization",
+		"veyor"
+	],
+	"files.exclude": {
+		"**/.git": true,
+		"**/.DS_Store": true,
+		"**/bin": true,
+		"**/obj": true,
+		"artifacts": true,
+		"packages": true
+	}
+}
